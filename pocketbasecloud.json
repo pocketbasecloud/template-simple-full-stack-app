@@ -1,0 +1,22 @@
+{
+    "name": "SaaS",
+    "description": "Your awesome SaaS",
+    "services": {
+        "pocketbase": {
+            "directory": "pocketbase",
+            "version": "0.34.2"
+        },
+        "backend": {
+            "runtime": "deno",
+            "startCommand": "deno run --allow-env --allow-net main.ts",
+            "port": 8000,
+            "directory": "backend"
+        },
+        "frontends": [
+            {
+                "name": "frontend",
+                "directory": "frontend"
+            }
+        ]
+    }
+}

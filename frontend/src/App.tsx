@@ -11,11 +11,12 @@ function App() {
     setUser(pb.authStore.record);
   }
 
+  console.log(user);
   if (!user) {
     return <LoginForm onLogin={handleAuth} />;
   }
 
-  return <Dashboard user={user} onLogout={handleAuth} />;
+  return <Dashboard onLogout={handleAuth} />;
 }
 
 export default App;
