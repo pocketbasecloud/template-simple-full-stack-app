@@ -17,3 +17,4 @@ backend/pb_data
 #!.yarn/cache
 .pnp.*
 .env
+pocketbase/pb_data
