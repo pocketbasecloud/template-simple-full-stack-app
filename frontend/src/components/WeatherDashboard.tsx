@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import type { WeatherCity } from "../types";
-import { BACKEND_URL } from "../lib/config";
+import { POCKETBASE_URL } from "../lib/config";
 
 export default function WeatherDashboard() {
   const [cities, setCities] = useState<WeatherCity[]>([]);
@@ -8,7 +8,7 @@ export default function WeatherDashboard() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`${BACKEND_URL}/api/weather`)
+    fetch(`${POCKETBASE_URL}/api/weather`)
       .then((r) => r.json())
       .then((data) => setCities(data.cities))
       .catch(() => setError("Failed to load weather data"))
